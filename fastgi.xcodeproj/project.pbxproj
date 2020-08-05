@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,15 @@
 		920320BF24D8FC7700D27DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920320BE24D8FC7700D27DFD /* Assets.xcassets */; };
 		920320C224D8FC7700D27DFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920320C124D8FC7700D27DFD /* Preview Assets.xcassets */; };
 		920320C524D8FC7700D27DFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920320C324D8FC7700D27DFD /* LaunchScreen.storyboard */; };
+		920320D524D9BBF800D27DFD /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920320D424D9BBF800D27DFD /* NetworkingManager.swift */; };
+		920320D724D9C07800D27DFD /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920320D624D9C07800D27DFD /* UserList.swift */; };
+		92CC99A924DAF7A400D6206D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC99A824DAF7A400D6206D /* LoginView.swift */; };
+		92CC99AB24DAF7FC00D6206D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC99AA24DAF7FC00D6206D /* RegisterView.swift */; };
+		E6A83BC4E63AB649CE35C5B0 /* Pods_fastgi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA774A55F651E24ECA4FED83 /* Pods_fastgi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68A6BA3EE230DF63C80EF22F /* Pods-fastgi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastgi.release.xcconfig"; path = "Target Support Files/Pods-fastgi/Pods-fastgi.release.xcconfig"; sourceTree = "<group>"; };
 		920320B524D8FC6F00D27DFD /* fastgi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fastgi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		920320B824D8FC6F00D27DFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		920320BA24D8FC6F00D27DFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,12 @@
 		920320C124D8FC7700D27DFD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		920320C424D8FC7700D27DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		920320C624D8FC7700D27DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		920320D424D9BBF800D27DFD /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		920320D624D9C07800D27DFD /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
+		92CC99A824DAF7A400D6206D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		92CC99AA24DAF7FC00D6206D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		AA774A55F651E24ECA4FED83 /* Pods_fastgi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fastgi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81900189BB1E6A2A601D5FA /* Pods-fastgi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastgi.debug.xcconfig"; path = "Target Support Files/Pods-fastgi/Pods-fastgi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6A83BC4E63AB649CE35C5B0 /* Pods_fastgi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		837AA7755DF57BFE41286556 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA774A55F651E24ECA4FED83 /* Pods_fastgi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		920320AC24D8FC6F00D27DFD = {
 			isa = PBXGroup;
 			children = (
 				920320B724D8FC6F00D27DFD /* fastgi */,
 				920320B624D8FC6F00D27DFD /* Products */,
+				92FC73E957D5D11950ABAB16 /* Pods */,
+				837AA7755DF57BFE41286556 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +79,12 @@
 		920320B724D8FC6F00D27DFD /* fastgi */ = {
 			isa = PBXGroup;
 			children = (
+				920320D324D9BB6300D27DFD /* Api */,
+				920320CE24D8FCA200D27DFD /* ModelView */,
+				920320CD24D8FC9B00D27DFD /* View */,
+				920320CC24D8FC8B00D27DFD /* Model */,
 				920320B824D8FC6F00D27DFD /* AppDelegate.swift */,
 				920320BA24D8FC6F00D27DFD /* SceneDelegate.swift */,
-				920320BC24D8FC6F00D27DFD /* ContentView.swift */,
 				920320BE24D8FC7700D27DFD /* Assets.xcassets */,
 				920320C324D8FC7700D27DFD /* LaunchScreen.storyboard */,
 				920320C624D8FC7700D27DFD /* Info.plist */,
@@ -75,6 +101,48 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		920320CC24D8FC8B00D27DFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				920320D624D9C07800D27DFD /* UserList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		920320CD24D8FC9B00D27DFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				920320BC24D8FC6F00D27DFD /* ContentView.swift */,
+				92CC99A824DAF7A400D6206D /* LoginView.swift */,
+				92CC99AA24DAF7FC00D6206D /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		920320CE24D8FCA200D27DFD /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		920320D324D9BB6300D27DFD /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				920320D424D9BBF800D27DFD /* NetworkingManager.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		92FC73E957D5D11950ABAB16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C81900189BB1E6A2A601D5FA /* Pods-fastgi.debug.xcconfig */,
+				68A6BA3EE230DF63C80EF22F /* Pods-fastgi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 920320C924D8FC7700D27DFD /* Build configuration list for PBXNativeTarget "fastgi" */;
 			buildPhases = (
+				665EEEB03652322C9EBCD746 /* [CP] Check Pods Manifest.lock */,
 				920320B124D8FC6F00D27DFD /* Sources */,
 				920320B224D8FC6F00D27DFD /* Frameworks */,
 				920320B324D8FC6F00D27DFD /* Resources */,
+				079246ED87B23A1C94F64ECB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +211,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		079246ED87B23A1C94F64ECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fastgi/Pods-fastgi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fastgi/Pods-fastgi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fastgi/Pods-fastgi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		665EEEB03652322C9EBCD746 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fastgi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		920320B124D8FC6F00D27DFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,6 +261,10 @@
 				920320B924D8FC6F00D27DFD /* AppDelegate.swift in Sources */,
 				920320BB24D8FC6F00D27DFD /* SceneDelegate.swift in Sources */,
 				920320BD24D8FC6F00D27DFD /* ContentView.swift in Sources */,
+				92CC99AB24DAF7FC00D6206D /* RegisterView.swift in Sources */,
+				920320D524D9BBF800D27DFD /* NetworkingManager.swift in Sources */,
+				920320D724D9C07800D27DFD /* UserList.swift in Sources */,
+				92CC99A924DAF7A400D6206D /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +398,7 @@
 		};
 		920320CA24D8FC7700D27DFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81900189BB1E6A2A601D5FA /* Pods-fastgi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +419,7 @@
 		};
 		920320CB24D8FC7700D27DFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A6BA3EE230DF63C80EF22F /* Pods-fastgi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
